@@ -106,6 +106,7 @@ npx skills add https://github.com/zhinkgit/embeddedskills -g -y
 | 🔌 Communication | **serial** | Scan serial ports, real-time monitor, send data, hex view | `scan` `monitor` `send` `hex` `log` |
 | 🔌 Communication | **can** | CAN/CAN-FD monitoring, send frames, DBC decode, statistics | `scan` `monitor` `send` `decode` `stats` |
 | 🔌 Communication | **net** | Packet capture analysis, connectivity test, port scan, traffic stats | `capture` `analyze` `ping` `scan` `stats` |
+| 🔌 Communication | **ssh** | SSH config, remote commands, upload/download, jump hosts, and port forwarding | `list` `find` `show` `add` + exec/transfer/tunnel |
 | 🎯 Orchestration | **workflow** | Auto-detect project → Select toolchain → Orchestrate full flow | `plan` `build` `build-flash` `build-debug` `observe` `diagnose` |
 
 > [!TIP]
@@ -224,6 +225,7 @@ workspace/
 | serial | pyserial · USB-to-serial driver |
 | can | python-can · cantools · pyserial · USB-CAN driver |
 | net | Wireshark (tshark) · Npcap |
+| ssh | OpenSSH client (`ssh` / `scp` / `ssh-keygen`) |
 
 > Except for CAN and serial, all Skills are implemented using Python standard library — no additional Python dependencies needed.
 
@@ -248,6 +250,7 @@ workspace/
 | serial | ✅ Tested |
 | net | ✅ Tested |
 | can | 🔧 Pending test |
+| ssh | ✅ Tested |
 | workflow | ✅ Tested |
 
 ---

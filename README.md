@@ -106,6 +106,7 @@ npx skills add https://github.com/zhinkgit/embeddedskills -g -y
 | 🔌 通信 | **serial** | 扫描串口、实时监控、发送数据、Hex 查看 | `scan` `monitor` `send` `hex` `log` |
 | 🔌 通信 | **can** | CAN/CAN-FD 监控、发帧、DBC 解码、统计 | `scan` `monitor` `send` `decode` `stats` |
 | 🔌 通信 | **net** | 抓包分析、连通性测试、端口扫描、流量统计 | `capture` `analyze` `ping` `scan` `stats` |
+| 🔌 通信 | **ssh** | SSH 配置、远程命令、上传下载、跳板机和端口转发 | `list` `find` `show` `add` + exec/transfer/tunnel |
 | 🎯 编排 | **workflow** | 自动识别工程 → 选择工具链 → 串联全流程 | `plan` `build` `build-flash` `build-debug` `observe` `diagnose` |
 
 > [!TIP]
@@ -221,6 +222,7 @@ workspace/
 | serial | pyserial · USB 转串口驱动 |
 | can | python-can · cantools · pyserial · USB-CAN 驱动 |
 | net | Wireshark (tshark) · Npcap |
+| ssh | OpenSSH 客户端 (`ssh` / `scp` / `ssh-keygen`) |
 
 > 除 CAN 和串口外，所有 Skill 均基于 Python 标准库实现，无需额外安装 Python 依赖。
 
@@ -245,6 +247,7 @@ workspace/
 | serial | ✅ 已完成测试 |
 | net | ✅ 已完成测试 |
 | can | 🔧 待测试 |
+| ssh | ✅ 已完成测试 |
 | workflow | ✅ 已完成测试 |
 
 ---
