@@ -107,6 +107,7 @@ npx skills add https://github.com/zhinkgit/embeddedskills -g -y
 | 🔌 Communication | **can** | CAN/CAN-FD monitoring, send frames, DBC decode, statistics | `scan` `monitor` `send` `decode` `stats` |
 | 🔌 Communication | **net** | Packet capture analysis, connectivity test, port scan, traffic stats | `capture` `analyze` `ping` `scan` `stats` |
 | 🔌 Communication | **ssh** | SSH config, remote commands, upload/download, jump hosts, and port forwarding | `list` `find` `show` `add` + exec/transfer/tunnel |
+| 🔌 Communication | **terminal** | Bidirectional serial, SSH, and local shell sessions | `start` `send` `read` `attach` `stop` |
 | 🎯 Orchestration | **workflow** | Auto-detect project → Select toolchain → Orchestrate full flow | `plan` `build` `build-flash` `build-debug` `observe` `diagnose` |
 
 > [!TIP]
@@ -226,8 +227,9 @@ workspace/
 | can | python-can · cantools · pyserial · USB-CAN driver |
 | net | Wireshark (tshark) · Npcap |
 | ssh | OpenSSH client (`ssh` / `scp` / `ssh-keygen`) |
+| terminal | pyserial for serial backend · OpenSSH client for SSH backend |
 
-> Except for CAN and serial, all Skills are implemented using Python standard library — no additional Python dependencies needed.
+> Except for CAN, serial, and terminal's serial backend, all Skills are implemented using Python standard library — no additional Python dependencies needed.
 
 > [!WARNING]
 > On Windows, using `probe-rs` with `J-Link` typically requires switching the probe driver to `WinUSB`, which can break the official SEGGER tooling. If you still rely on the SEGGER toolchain, prefer the existing `jlink` skill.
@@ -251,6 +253,7 @@ workspace/
 | net | ✅ Tested |
 | can | 🔧 Pending test |
 | ssh | ✅ Tested |
+| terminal | 🔧 Pending hardware test |
 | workflow | ✅ Tested |
 
 ---

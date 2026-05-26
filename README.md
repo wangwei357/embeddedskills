@@ -107,6 +107,7 @@ npx skills add https://github.com/zhinkgit/embeddedskills -g -y
 | 🔌 通信 | **can** | CAN/CAN-FD 监控、发帧、DBC 解码、统计 | `scan` `monitor` `send` `decode` `stats` |
 | 🔌 通信 | **net** | 抓包分析、连通性测试、端口扫描、流量统计 | `capture` `analyze` `ping` `scan` `stats` |
 | 🔌 通信 | **ssh** | SSH 配置、远程命令、上传下载、跳板机和端口转发 | `list` `find` `show` `add` + exec/transfer/tunnel |
+| 🔌 通信 | **terminal** | 串口、SSH、本地 Shell 双向交互会话 | `start` `send` `read` `attach` `stop` |
 | 🎯 编排 | **workflow** | 自动识别工程 → 选择工具链 → 串联全流程 | `plan` `build` `build-flash` `build-debug` `observe` `diagnose` |
 
 > [!TIP]
@@ -223,8 +224,9 @@ workspace/
 | can | python-can · cantools · pyserial · USB-CAN 驱动 |
 | net | Wireshark (tshark) · Npcap |
 | ssh | OpenSSH 客户端 (`ssh` / `scp` / `ssh-keygen`) |
+| terminal | pyserial（串口后端）· OpenSSH 客户端（SSH 后端） |
 
-> 除 CAN 和串口外，所有 Skill 均基于 Python 标准库实现，无需额外安装 Python 依赖。
+> 除 CAN、串口和 terminal 的串口后端外，所有 Skill 均基于 Python 标准库实现，无需额外安装 Python 依赖。
 
 > [!WARNING]
 > Windows 下若要让 `probe-rs` 驱动 `J-Link`，通常需要把驱动切到 `WinUSB`，这会影响 SEGGER 官方工具继续使用。若你仍依赖 J-Link 官方工具链，优先继续使用现有 `jlink` skill。
@@ -248,6 +250,7 @@ workspace/
 | net | ✅ 已完成测试 |
 | can | 🔧 待测试 |
 | ssh | ✅ 已完成测试 |
+| terminal | 🔧 待硬件测试 |
 | workflow | ✅ 已完成测试 |
 
 ---
